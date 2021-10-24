@@ -1,0 +1,56 @@
+h1, p {
+  font-family: Lato;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+.game-of-life {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+
+  .example {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left, .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .cell {
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .game {
+    background: black;
+    .cell {
+      height: 2px;
+      width: 2px;
+      border: none;
+
+      &.active{
+        background: white;
+      }
+    }
+  }
+}
